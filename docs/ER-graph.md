@@ -16,7 +16,7 @@ erDiagram
         url source
     }
 
-    INGREDIENTS{
+    INGREDIENT{
         int name
         int stock
         string icon "this could just be ignored to make creating them a faster process"
