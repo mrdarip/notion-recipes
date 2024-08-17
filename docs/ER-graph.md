@@ -1,7 +1,7 @@
 ```mermaid
 erDiagram
     MEAL 1 to 1+ RECIPE: makes
-    RECIPE 0+ to 1+ INGREDIENTS:compose
+    RECIPE 0+ to 1+ INGREDIENT:compose
 
     MEAL{
         string name
