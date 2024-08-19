@@ -20,12 +20,20 @@
                 <input type="password" id="password">
             </section>
 
-            <input type="button" value="Login" id="login">
+            <input onclick="login()" type="button" value="Login" id="login">
 
         </form>
 
         <script src="" async defer>
-            
+            var id = document.getElementById("idNotion")
+            var password = document.getElementById("password")
+
+            login(){
+                var idSelector = document.querySelector("#idNotion")
+                var passwordSelector = document.querySelector("#password")
+                
+                window.localStorage.setItem("", idSelector.va)
+            }
         </script>
         
     </body>
