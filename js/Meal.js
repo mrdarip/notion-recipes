@@ -1,5 +1,7 @@
 class Meal {
-    constructor(name, description, previewSrc, rating, observations, sourceURL) {
+    constructor(id, name, description, previewSrc, rating, observations, sourceURL) {
+        this.id = id;
+
         this.name = name;
         this.description = description;
         this.previewSrc = previewSrc;
@@ -8,8 +10,8 @@ class Meal {
         this.sourceURL = sourceURL;
     }
 
-    static getAllMeals() {
-        // needed notion handler
+    getRecipes() {
+        MealDAO.queryRecipesOf(this.id);
     }
 
     getRating() {
