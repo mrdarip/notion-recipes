@@ -9,8 +9,8 @@
             "observations": "test",
             "sourceURL": "test",
             "ingredientsUsed":[
-                {"ingredientId": -1, "quantity": 1},
-                {"ingredientId": -2, "quantity": 2}
+                {"id": -1, "quantity": 1},
+                {"id": -2, "quantity": 2}
             ]
         },
         {
@@ -22,8 +22,8 @@
             "observations": "test",
             "sourceURL": "test",
             "ingredientsUsed":[
-                {"ingredientId": -3, "quantity": 1},
-                {"ingredientId": -2, "quantity": 2}
+                {"id": -3, "quantity": 1},
+                {"id": -2, "quantity": 2}
             ]
         }
     ]

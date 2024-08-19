@@ -10,8 +10,9 @@ class DAO {
         this.loadMeals();  
     }
 
-    getIngredientsOf(id) {
-        //must implement meal recipe cross reference
+    getIngredientsOf(mealId) {
+        meal = this.getMeal(mealId);
+        return meal.ingredientsUsed.map(ingredient => this.getIngredient(ingredient.id));
     }
 
     loadMeals() {
@@ -27,8 +28,8 @@ class DAO {
         return this.meals;
     }
 
-    getMeal(id) {
-        return this.meals.find(meal => meal.id === id);
+    getMeal(mealId) {
+        return this.meals.find(meal => meal.id === mealId);
     }
 
     loadIngredients() {
@@ -40,8 +41,8 @@ class DAO {
             .catch(error => console.error(error));
     }
 
-    getIngredient(id) {
-        return this.ingredients.find(ingredient => ingredient.id === id);
+    getIngredient(ingredientId) {
+        return this.ingredients.find(ingredient => ingredient.id === ingredientId);
     }
 
     getIngredients() {
