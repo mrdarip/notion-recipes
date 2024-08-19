@@ -1,25 +1,31 @@
-class DAO{
-    static queryIngredientsOf(id){
+class DAO {
+    constructor(ingredientsJsonSrc, mealsJsonSrc) {
+        console.log("Creating DAO");
+        this.ingredientsJsonSrc = ingredientsJsonSrc;
+        this.mealsJsonSrc = mealsJsonSrc;
+    }
+
+    queryIngredientsOf(id) {
         console.log("Querying ingredients of meal with id: " + id);
         console.error("Not implemented yet");
     }
 
-    static queryMeals(){
+    queryMeals() {
         console.log("Querying all meals");
         console.error("Not implemented yet");
     }
 
-    static queryMeal(id){
+    queryMeal(id) {
         console.log("Querying meal with id: " + id);
         console.error("Not implemented yet");
     }
 
-    static queryIngredients(){
+    queryIngredients() {
         console.log("Querying all ingredients");
         console.error("Not implemented yet");
     }
 
-    static queryIngredient(id){
+    queryIngredient(id) {
         console.log("Querying ingredient with id: " + id);
         console.error("Not implemented yet");
     }
