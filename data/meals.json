@@ -1,0 +1,30 @@
+{
+    "meals": [
+        {
+            "id": -1,
+            "name": "test",
+            "description": "test",
+            "previewSrc": "test",
+            "rating": 5,
+            "observations": "test",
+            "sourceURL": "test",
+            "ingredientsUsed":[
+                {"id": -1, "quantity": 1},
+                {"id": -2, "quantity": 2}
+            ]
+        },
+        {
+            "id": -2,
+            "name": "test",
+            "description": "test",
+            "previewSrc": "test",
+            "rating": 1,
+            "observations": "test",
+            "sourceURL": "test",
+            "ingredientsUsed":[
+                {"id": -3, "quantity": 1},
+                {"id": -2, "quantity": 2}
+            ]
+        }
+    ]
+}

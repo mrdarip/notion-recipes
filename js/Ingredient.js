@@ -1,17 +1,22 @@
 
 class Ingredient {
-    constructor(id, name, stock) {
+    constructor(id, name, unit) {
         this.id = id;
 
         this.name = name;
-        this.stock = stock;
+        this.unit = unit;
+
     }
 
     getName() {
         return this.name;
     }
 
-    getStock() {
-        return this.stock;
+    static fromJSON(json) {
+        return new Ingredient(
+            json.id,
+            json.name,
+            json.unit
+        );
     }
 }
