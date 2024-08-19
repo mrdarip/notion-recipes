@@ -2,15 +2,18 @@
     "ingredients": [
         {
             "id": -1,
-            "name": "test"
+            "name": "test",
+            "unit": "kilogram"
         },
         {
             "id": -2,
-            "name": "test"
+            "name": "test",
+            "unit": "gram"
         },
         {
             "id": -3,
-            "name": "test"
+            "name": "test",
+            "unit": "unit"
         }
     ]
 }

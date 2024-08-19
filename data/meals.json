@@ -7,16 +7,24 @@
             "previewSrc": "test",
             "rating": 5,
             "observations": "test",
-            "sourceURL": "test"
+            "sourceURL": "test",
+            "ingredientsUsed":[
+                {"ingredientId": -1, "quantity": 1},
+                {"ingredientId": -2, "quantity": 2}
+            ]
         },
         {
             "id": -2,
             "name": "test",
             "description": "test",
             "previewSrc": "test",
-            "rating": 5,
+            "rating": 1,
             "observations": "test",
-            "sourceURL": "test"
+            "sourceURL": "test",
+            "ingredientsUsed":[
+                {"ingredientId": -3, "quantity": 1},
+                {"ingredientId": -2, "quantity": 2}
+            ]
         }
     ]
 }
