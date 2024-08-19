@@ -1,5 +1,5 @@
 class Meal {
-    constructor(id, name, description, previewSrc, rating, observations, sourceURL) {
+    constructor(id, name, description, previewSrc, rating, observations, sourceURL, ingredients) {
         this.id = id;
 
         this.name = name;
@@ -8,6 +8,7 @@ class Meal {
         this.rating = rating;
         this.observations = observations;
         this.sourceURL = sourceURL;
+        this.ingredients = ingredients;
     }
 
     getRecipes() {
@@ -36,5 +37,18 @@ class Meal {
 
     getSourceURL() {
         return this.sourceURL;
+    }
+
+    static fromJSON(json) {
+        return new Meal(
+            json.id,
+            json.name,
+            json.description,
+            json.previewSrc,
+            json.rating,
+            json.observations,
+            json.sourceURL,
+            json.ingredients.map(ingredient => Ingredient.fromJSON(ingredient))
+        );
     }
 }
