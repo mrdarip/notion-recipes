@@ -1,9 +1,11 @@
 class Meal {
-    constructor(name, description, previewSrc, rating) {
+    constructor(name, description, previewSrc, rating, observations, sourceURL) {
         this.name = name;
         this.description = description;
         this.previewSrc = previewSrc;
         this.rating = rating;
+        this.observations = observations;
+        this.sourceURL = sourceURL;
     }
 
     static getAllMeals() {
@@ -28,5 +30,13 @@ class Meal {
 
     getPreviewSrc() {
         return this.previewSrc;
+    }
+
+    getObservations() {
+        return this.observations;
+    }
+
+    getSourceURL() {
+        return this.sourceURL;
     }
 }
