@@ -1,32 +1,58 @@
 class DAO {
     constructor(ingredientsJsonSrc, mealsJsonSrc) {
-        console.log("Creating DAO");
         this.ingredientsJsonSrc = ingredientsJsonSrc;
         this.mealsJsonSrc = mealsJsonSrc;
+
+        this.ingredients = [];
+        this.meals = [];
+
+        this.loadIngredients();
+        this.loadMeals();  
     }
 
-    queryIngredientsOf(id) {
-        console.log("Querying ingredients of meal with id: " + id);
-        console.error("Not implemented yet");
+    getIngredientsOf(id) {
+        //must implement meal recipe cross reference
     }
 
-    queryMeals() {
-        console.log("Querying all meals");
-        console.error("Not implemented yet");
+    loadMeals() {
+        fetch(this.mealsJsonSrc)
+            .then(response => response.json())
+            .then(data => {
+                this.meals = data;
+            })
+            .catch(error => console.error(error));
     }
 
-    queryMeal(id) {
-        console.log("Querying meal with id: " + id);
-        console.error("Not implemented yet");
+    getMeals() {
+        return this.meals;
     }
 
-    queryIngredients() {
-        console.log("Querying all ingredients");
-        console.error("Not implemented yet");
+    getMeal(id) {
+        return this.meals.find(meal => meal.id === id);
     }
 
-    queryIngredient(id) {
-        console.log("Querying ingredient with id: " + id);
-        console.error("Not implemented yet");
+    loadIngredients() {
+        fetch(this.ingredientsJsonSrc)
+            .then(response => response.json())
+            .then(data => {
+                this.ingredients = data;
+            })
+            .catch(error => console.error(error));
+    }
+
+    getIngredient(id) {
+        return this.ingredients.find(ingredient => ingredient.id === id);
+    }
+
+    getIngredients() {
+        return this.ingredients;
+    }
+
+    addIngredient(ingredient) {
+        this.ingredients.push(ingredient);
+    }
+
+    addMeal(meal) {
+        this.meals.push(meal);
     }
 }
