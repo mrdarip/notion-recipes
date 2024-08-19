@@ -7,7 +7,6 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="./css/styleindex.css">
-        <script src="./js/DAO.js"></script>
     </head>
     <body>
         
@@ -21,6 +20,10 @@
                 <input type="password" id="password">
             </section>
 
+            <ul populate="mealsAs:li">
+
+            </ul>
+
             <input onclick="login()" type="button" value="Login" id="login">
 
         </form>
@@ -29,7 +32,7 @@
             var id = document.getElementById("idNotion")
             var password = document.getElementById("password")
 
-            login(){
+            function login(){
                 var idSelector = document.querySelector("#idNotion")
                 var passwordSelector = document.querySelector("#password")
                 
@@ -37,6 +40,8 @@
             }
         </script>
         
+        
+        <script src="./js/DAO.js"></script>
         <script src="./js/populator.js"></script>
     </body>
 </html>
