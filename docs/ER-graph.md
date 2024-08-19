@@ -1,17 +1,12 @@
 ```mermaid
 erDiagram
-    MEAL 1 to 1+ RECIPE: makes
-    RECIPE 0+ to 1+ INGREDIENT:compose
+    MEAL 0+ to 1+ INGREDIENT:compose
 
     MEAL{
         string name
-        int rating "calculated from recipes"
+        int rating
         string description
         image preview
-    }
-
-    RECIPE{
-        int rating
         string observations
         url source
     }
