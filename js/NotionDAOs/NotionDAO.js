@@ -27,9 +27,23 @@ class NotionDAO {
         });
     }
 
-    queryDatabasesInPage(pageId) {
+    queryPageContent(pageId) {
         console.log("Querying databases in page with id: " + pageId);
 
-        console.error("Notion API is not implemented yet");
+        fetch("https://api.notion.com/v1/pages/" + pageId, {
+            method: "GET",
+            headers: {
+                "Authorization": "Bearer " + this.secret,
+                "Notion-Version": "2022-06-28",
+                "Content-Type": "application/json"
+            }
+        }).then(response => {
+            return response.json();
+        }).then(data => {
+            console.log(data);
+            return data;
+        }).catch(error => {
+            console.error(error);
+        });
     }
 }
