@@ -12,10 +12,6 @@ class Meal {
         // needed notion handler
     }
 
-    getRecipes() {
-        // needed notion handler
-    }
-
     getRating() {
         return this.rating;
     }
