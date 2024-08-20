@@ -5,9 +5,6 @@ class DAO {
 
         this.ingredients = [];
         this.meals = [];
-
-        this.loadIngredients();
-        this.loadMeals();  
     }
 
     getIngredientsOf(mealId) {
@@ -15,16 +12,15 @@ class DAO {
         return meal.ingredientsUsed.map(ingredient => this.getIngredient(ingredient.id));
     }
 
-    loadMeals() {
-        fetch(this.mealsJsonSrc)
-            .then(response => response.json())
-            .then(data => {
-                this.meals = data;
-            })
-            .catch(error => console.error(error));
+    async loadMeals() {
+        let response = await fetch(this.mealsJsonSrc);
+        let json = await response.json();
+ 
+        this.meals = json["meals"];
     }
 
     getMeals() {
+        console.log(this.meals);
         return this.meals;
     }
 
@@ -32,13 +28,11 @@ class DAO {
         return this.meals.find(meal => meal.id === mealId);
     }
 
-    loadIngredients() {
-        fetch(this.ingredientsJsonSrc)
-            .then(response => response.json())
-            .then(data => {
-                this.ingredients = data;
-            })
-            .catch(error => console.error(error));
+    async loadIngredients() {
+        let response = await fetch(this.ingredientsJsonSrc);
+        let json = await response.json();
+
+        this.ingredients = json["ingredients"];
     }
 
     getIngredient(ingredientId) {
