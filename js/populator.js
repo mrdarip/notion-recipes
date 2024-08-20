@@ -22,7 +22,7 @@ async function populateAll(){
         // Get the populate values
         // They are defined like in css but in a single line, like this:
         // property: value; property: value;
-        let populateValues = element.getAttribute("populate").replace(" ","").split(";");
+        var populateValues = element.getAttribute("populate").split(";");
 
         populateValues.forEach(pair => {
             //the switch will go through the case that is true
@@ -38,7 +38,6 @@ async function populateAll(){
                     wrappingElement = pair.split(":")[1];
 
                     dao.getMeals().forEach(meal => {
-                            console.log(meal);
                             let mealElement = document.createElement(wrappingElement);
                             mealElement.innerHTML = meal.name;
                             element.appendChild(mealElement);
