@@ -3,49 +3,20 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Login</title>
+        <title>Recipes</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://kit.fontawesome.com/7115f6f010.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="./css/styleindex.css">
     </head>
     <body>
-        <ul populate="mealsAs:li;delete">
-
-        </ul>
-
-        <ul populate="delete">
-        </ul>
+        <header id="header"></header>
         
-        <form action="">
-
-            <section>
-                <label for="idNotion">Insert Id: </label>
-                <input type="text" id="idNotion">
-    
-                <label for="password">Insert password: </label>
-                <input type="password" id="password">
-            </section>
-
-            
-
-            <input onclick="login()" type="button" value="Login" id="login">
-
-        </form>
-
-        <script src="" async defer>
-            var id = document.getElementById("idNotion")
-            var password = document.getElementById("password")
-
-            function login(){
-                var idSelector = document.querySelector("#idNotion")
-                var passwordSelector = document.querySelector("#password")
-                
-                window.localStorage.setItem("", idSelector.va)
-            }
-        </script>
         
         
         <script src="./js/DAO.js"></script>
         <script src="./js/populator.js"></script>
+        <script src="./js/headerfooter.js"></script>
     </body>
 </html>

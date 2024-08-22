@@ -11,14 +11,3 @@ body{
     width: 90%;
     margin: auto;
 }
-
-form{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
-
-form section{
-    padding: 5%;
-}
