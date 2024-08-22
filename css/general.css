@@ -15,7 +15,7 @@ header{
 ul{
     display: flex;
     justify-content: space-around;
-    padding: 2%;
+    padding: 1%;
 }
 ul li{
     list-style: none;
