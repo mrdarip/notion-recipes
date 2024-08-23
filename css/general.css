@@ -1,26 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 *{
     box-sizing: border-box;
     vertical-align: top;
-    /*font-family: ;*/
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     margin: 0;
     padding: 0;
 }
 :root{
+    --text: #230f44;
 
+    --background: #fff3e5;
+
+    --primary-light: #ab8fd6;
+    --primary: #7444bb;
+    --primary-shadow: #452970;
+
+    --secondary-light: #e3d9f2;
+    --secondary: #ab8cd9;
+    --secondary-shadow: #7340bf;
+
+    --accent-light: #c7b1e7;
+    --accent: #8e63cf;
+    --accent-shadow: #5b309c;
 }
 
+body{
+    background-color: var(--background);
+    color: var(--text);
+}
 header{
-    border-bottom: 1px solid black;
+    background-color: var(--primary);
+    padding: 1%;
 }
 ul{
     display: flex;
-    justify-content: space-around;
-    padding: 1%;
+    justify-content: space-between;
 }
 ul li{
     list-style: none;
 }
-ul li a{
+ul li a i{
     text-decoration: none;
-    color: black;
+    color: var(--secondary);
+    font-size: 2em;
+}
+#createLink, #manageLink{
+    background-color: var(--secondary);
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 15%;
+    border-radius: 10px;
+    transition: all 0.1s;
+}
+#createLink:hover, #manageLink:hover{
+    transition: all 0.1s;
+    box-shadow: 0.1em 0.1em 1px var(--text);
+}
+ul li input{
+    padding: 3%;
 }
