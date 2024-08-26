@@ -2,7 +2,7 @@
     "meals": [
         {
             "id": -1,
-            "name": "test",
+            "name": "ramen",
             "recipe": "test",
             "previewSrc": "test",
             "rating": 5,
@@ -15,10 +15,24 @@
         },
         {
             "id": -2,
-            "name": "test",
+            "name": "horse",
             "recipe": "test",
             "previewSrc": "test",
             "rating": 1,
+            "observations": "test",
+            "sourceURL": "test",
+            "ingredientsUsed":[
+                {"id": -3, "quantity": 1},
+                {"id": -2, "quantity": 2}
+            ]
+        }
+        ,
+        {
+            "id": -3,
+            "name": "aarati",
+            "recipe": "test",
+            "previewSrc": "test",
+            "rating": 3,
             "observations": "test",
             "sourceURL": "test",
             "ingredientsUsed":[
