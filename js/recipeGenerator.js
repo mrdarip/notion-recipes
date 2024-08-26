@@ -38,7 +38,7 @@ function cardOf(meal) {
     var card = document.createElement("li");
     card.classList.add("card");
     card.innerHTML = `
-        <img src="${meal.image}" alt="${meal.name}">
+        <img src="${meal.previewSrc != ""?meal.previewSrc:"https://dummyimage.com/250"}" alt="${meal.name}">
         <h3>
             ${meal.name}
         </h3>
