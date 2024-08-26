@@ -32,19 +32,19 @@ body{
     color: var(--text);
 }
 header{
-    background-color: var(--primary);
+    background-color: var(--secondary);
     padding: 1%;
 }
 ul{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 ul li{
     list-style: none;
 }
 ul li a i{
     text-decoration: none;
-    color: var(--secondary);
+    color: var(--secondary-shadow);
     font-size: 2em;
 }
 #createLink, #manageLink{
