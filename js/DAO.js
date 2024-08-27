@@ -13,7 +13,7 @@ class DAO {
     }
 
     async loadMeals() {
-        let response = await fetch(this.mealsJsonSrc);
+        let response = await fetch(githubify(this.mealsJsonSrc));
         let json = await response.json();
  
         this.meals = json["meals"];
@@ -29,7 +29,7 @@ class DAO {
     }
 
     async loadIngredients() {
-        let response = await fetch(this.ingredientsJsonSrc);
+        let response = await fetch(githubify(this.ingredientsJsonSrc));
         let json = await response.json();
 
         this.ingredients = json["ingredients"];
@@ -50,4 +50,8 @@ class DAO {
     addMeal(meal) {
         this.meals.push(meal);
     }
+}
+
+function githubify(path) {
+    return window.location.hostname === "mrdarip.github.io"? path.replace("../", "./"): path;
 }
