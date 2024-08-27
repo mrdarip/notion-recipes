@@ -1,7 +1,9 @@
 window.onload = function ()
-    {
-        var header = document.getElementById('header');
+{
+    var header = document.querySelector('header');
+    var footer = document.querySelector('footer');
 
-        header.innerHTML = "<nav><ul><li><a href=\"../index.html\"><i class=\"fa-solid fa-house\"></i></a></li><li><input placeholder=\"Search...\" type=\"text\" id=\"searchText\"></li><li><a href=\"../html/create.html\" id=\"createLink\">Create</a></li><li><a href=\"../html/manage.html\" id=\"manageLink\">Manage</a></li></ul></nav>";
-
-    }
+    fetch(githubify("../data/html-templates/header.html"))
+    .then(response => response.text())
+    .then(data => header.innerHTML = data);
+}
