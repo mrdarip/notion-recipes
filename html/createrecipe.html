@@ -14,7 +14,28 @@
     <body>
         <header id="header"></header>
         
-        
+        <main>
+            <section id="create-recipe">
+                <h1>Create Recipe</h1>
+                <form id="create-recipe-form">
+                    <label for="name"></label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="description"></label>
+                    <input type="text" id="description" name="description" required>
+                    <label for="previewSrc"></label>
+                    <input type="text" id="previewSrc" name="previewSrc" required>
+                    <label for="rating"></label>
+                    <input type="number" id="rating" name="rating" required>
+                    <label for="observations"></label>
+                    <input type="text" id="observations" name="observations" required>
+                    <label for="sourceURL"></label>
+                    <input type="text" id="sourceURL" name="sourceURL" required>
+                    <label for="ingredients"></label>
+                    <input type="text" id="ingredients" name="ingredients" required>
+                    <button type="submit">Create</button>
+                </form>
+            </section>
+        </main>
         
         <script src="../js/DAO.js"></script>
         <script src="../js/populator.js"></script>
