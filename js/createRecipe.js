@@ -9,5 +9,5 @@ function onSubmit() {
 
     let meal = new Meal(name, description, previewSrc, rating, observations, sourceURL, ingredients);
 
-    print(meal);
+    console.log(meal);
 }
