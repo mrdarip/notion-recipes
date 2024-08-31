@@ -4,7 +4,7 @@ async function fillLis() {
     var ULs = document.querySelectorAll("#recommendations ul");
 
     console.log(ULs);
-
+    
     await dao.loadMeals();
     
     ULs.forEach(ul => {

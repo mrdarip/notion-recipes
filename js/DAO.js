@@ -5,13 +5,6 @@ class DAO {
 
         this.ingredients = [];
         this.meals = [];
-
-        this.isReady = false;
-
-        this.loadIngredients();
-        this.loadMeals();
-
-        this.isReady = true;
     }
 
     getIngredientsOf(mealId) {
@@ -21,7 +14,6 @@ class DAO {
 
     async loadMeals() {
         let response = await fetch(githubify(this.mealsJsonSrc));
-        console.log(response);
         let json = await response.json();
         console.log(json);
  
