@@ -51,11 +51,11 @@ class DAO {
     }
 
     addIngredient(ingredient) {
-        this.ingredients.push(JSON.stringify(ingredient));
+        window.location.href = "commit.html?ingredient=" + JSON.stringify(ingredient);
     }
 
     addMeal(meal) {
-        this.meals.push(JSON.stringify(meal));
+        window.location.href = "commit.html?meal=" + JSON.stringify(meal);
     }
 }
 
