@@ -21,13 +21,14 @@ class DAO {
 
     async loadMeals() {
         let response = await fetch(githubify(this.mealsJsonSrc));
+        console.log(response);
         let json = await response.json();
+        console.log(json);
  
         this.meals = json["meals"];
     }
 
     getMeals() {
-        console.log(this.meals);
         return this.meals;
     }
 
@@ -61,6 +62,9 @@ class DAO {
 
 dao = new DAO("../data/ingredients.json", "../data/meals.json");
 
+dao.loadIngredients().then(() => {
+    console.log(dao.getIngredients());
+});
 
 
 function githubify(path) {
