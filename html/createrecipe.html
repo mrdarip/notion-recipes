@@ -17,7 +17,7 @@
         <main>
             <section id="create-recipe">
                 <h1>Create Recipe</h1>
-                <form id="create-recipe-form" onsubmit="onSubmit()">
+                <form id="create-recipe-form">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" required>
                     <label for="description">Description</label>
@@ -32,7 +32,7 @@
                     <input type="text" id="sourceURL" name="sourceURL" required>
                     <label for="ingredients">Ingredients</label>
                     <input type="text" id="ingredients" name="ingredients" required>
-                    <button type="submit">Create</button>
+                    <button type="button" onclick="onSubmit()">Create</button>
                 </form>
             </section>
         </main>
