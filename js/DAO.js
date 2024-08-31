@@ -64,5 +64,20 @@ dao = new DAO("../data/ingredients.json", "../data/meals.json");
 
 
 function githubify(path) {
-    return window.location.hostname === "mrdarip.github.io"? path.replace("../", "./"): path;
+    var githubifiedPath = path;
+
+    isGithubPage = window.location.hostname === "mrdarip.github.io";
+    isRoot = window.location.pathname.split("/").length <= 3;
+
+    if (isGithubPage && !isRoot) {
+        githubifiedPath = path.replace("../", "./");
+
+        /*if(isRoot){
+            githubifiedPath = path.replace("../", "./");
+        }*/
+    }
+
+    
+
+    return githubifiedPath;
 }
