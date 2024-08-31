@@ -11,10 +11,6 @@ class Meal {
         this.ingredients = ingredients;
     }
 
-    getRecipes() {
-        MealDAO.queryRecipesOf(this.id);
-    }
-
     getRating() {
         return this.rating;
     }
