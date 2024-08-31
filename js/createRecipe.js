@@ -7,7 +7,7 @@ function onSubmit() {
     let sourceURL = document.getElementById('sourceURL').value;
     let ingredients = document.getElementById('ingredients').value;
 
-    let meal = new Meal(name, description, previewSrc, rating, observations, sourceURL, ingredients);
+    let meal = new Meal(99, name, description, previewSrc, rating, observations, sourceURL, ingredients);
 
     console.log(meal);
 
