@@ -44,11 +44,11 @@ class DAO {
     }
 
     addIngredient(ingredient) {
-        this.ingredients.push(ingredient);
+        this.ingredients.push(JSON.stringify(ingredient));
     }
 
     addMeal(meal) {
-        this.meals.push(meal);
+        this.meals.push(JSON.stringify(meal));
     }
 }
 
