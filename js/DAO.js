@@ -7,6 +7,11 @@ class DAO {
         this.meals = [];
 
         this.isReady = false;
+
+        this.loadIngredients();
+        this.loadMeals();
+
+        this.isReady = true;
     }
 
     getIngredientsOf(mealId) {
@@ -56,9 +61,6 @@ class DAO {
 
 dao = new DAO("../data/ingredients.json", "../data/meals.json");
 
-dao.loadIngredients()
-.then(() => dao.loadMeals())
-.then(() => dao.isReady = true);
 
 
 function githubify(path) {
