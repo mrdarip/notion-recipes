@@ -10,4 +10,7 @@ function onSubmit() {
     let meal = new Meal(name, description, previewSrc, rating, observations, sourceURL, ingredients);
 
     console.log(meal);
+
+    dao.addMeal(meal);
+    dao.getMeals();
 }
