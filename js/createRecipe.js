@@ -11,6 +11,10 @@ function onSubmit() {
 
     console.log(meal);
 
+    while (!dao.isReady) {
+        console.log("waiting for DAO to be ready");
+    }
+
     dao.addMeal(meal);
     dao.getMeals();
 }

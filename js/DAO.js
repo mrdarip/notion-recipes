@@ -5,6 +5,8 @@ class DAO {
 
         this.ingredients = [];
         this.meals = [];
+
+        this.isReady = false;
     }
 
     getIngredientsOf(mealId) {
@@ -51,6 +53,13 @@ class DAO {
         this.meals.push(JSON.stringify(meal));
     }
 }
+
+dao = new DAO("../data/ingredients.json", "../data/meals.json");
+
+dao.loadIngredients()
+.then(() => dao.loadMeals())
+.then(() => dao.isReady = true);
+
 
 function githubify(path) {
     return window.location.hostname === "mrdarip.github.io"? path.replace("../", "./"): path;
