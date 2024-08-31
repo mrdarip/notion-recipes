@@ -32,7 +32,7 @@ elements.forEach(element => {
             
             // using regex to check if pair contains the word mealsAs ( mealsAs.* )
             case /mealsAs.*/i.test(pair):
-                //get the value asignated (ingredientsAs: value)
+                //get the value assigned (ingredientsAs: value)
                 wrappingElement = pair.split(":")[1];
 
                 dao.getMeals().forEach(meal => {
@@ -45,7 +45,7 @@ elements.forEach(element => {
 
             // using regex to check if pair contains the word ingredientsAs ( ingredientsAs.* )
             case /ingredientsAs.*/i.test(pair):
-                //get the value asignated (ingredientsAs: value)
+                //get the value assigned (ingredientsAs: value)
                 wrappingElement = pair.split(":")[1];
 
                 dao.getIngredients().forEach(ingredient => {
