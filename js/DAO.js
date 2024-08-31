@@ -69,7 +69,7 @@ function githubify(path) {
     isGithubPage = window.location.hostname === "mrdarip.github.io";
     isRoot = window.location.pathname.split("/").length <= 3;
 
-    if (isGithubPage && !isRoot) {
+    if (isGithubPage && isRoot) {
         githubifiedPath = path.replace("../", "./");
 
         /*if(isRoot){
