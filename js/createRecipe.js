@@ -1,4 +1,4 @@
-onSubmit(){
+function onSubmit() {
     let name = document.getElementById('name').value;
     let description = document.getElementById('description').value;
     let previewSrc = document.getElementById('previewSrc').value;
