@@ -71,13 +71,7 @@ function githubify(path) {
 
     if (isGithubPage && isRoot) {
         githubifiedPath = path.replace("../", "./");
-
-        /*if(isRoot){
-            githubifiedPath = path.replace("../", "./");
-        }*/
     }
-
-    
 
     return githubifiedPath;
 }
